@@ -10,15 +10,18 @@ formulario.addEventListener('submit', function(event){
     
     if (signo == "+") {
         resultado = operador1 + operador2;
-    } else if(operador == "-") {
+    } else if(signo == "-") {
         resultado = operador1 - operador2; 
-    } else if(operador == "*") {
+    } else if(signo == "*") {
         resultado = operador1 *  operador2;
-    } else if(operador == "/") {
+    } else if(signo == "/") {
         resultado = operador1 / operador2;
-    }
+    } else if(signo == '/' && operador2 == 0) {
+        resultado = 'ERROR: ¡No se puede dividir por cero!';
+    } else {
+        resultado = 'ERROR: Operador No Válido!';
 
 
 
-    document.getElementById('resultado').innerText = textoFinal
+    document.getElementById('resultado').innerText = textoFinal;
 })
